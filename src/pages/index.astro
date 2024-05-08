@@ -1,0 +1,15 @@
+---
+import Layout from "../Layout/Layout.astro";
+
+import Navbar from "@/sections/navbar.astro";
+import SideMenu from "@/sections/sideMenu.astro";
+import Hero from "@/sections/hero.astro";
+---
+
+<Layout>
+  <Navbar class="px-6 md:px-12 lg:px-12" />
+  <SideMenu />
+  <main class="px-6 md:px-12 lg:px-12">
+    <Hero />
+  </main>
+</Layout>

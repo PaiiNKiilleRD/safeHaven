@@ -1,0 +1,35 @@
+---
+import Button from "@/components/button.astro";
+import hero from "@/assets/img/hero.svg";
+import Image from "astro/components/Image.astro";
+---
+
+<section
+  id="hero"
+  class:list={[
+    "h-screen flex flex-col lg:flex-row  justify-center items-center pt-20 md:pt-0",
+    Astro.props.class,
+  ]}
+>
+  <article class="lg:w-2/3">
+    <h1 class="text-4xl md:text-5xl font-bold font-space mb-5 text-[#4D869C]">
+      TU HOGAR, <br class="hidden md:inline" /> NUESTRA PRIORIDAD.
+    </h1>
+    <p class="font-fira mb-5 md:text-2xl text-gray-600">
+      Ofrecemos una solución completa de seguridad para el hogar, proporcionando
+      a los clientes una gama de productos y servicios diseñados para proteger
+      sus hogares de manera efectiva y sencilla.
+    </p>
+    <div class="w-full flex justify-around">
+      <Button class="bg-green-500 text-white"> Contactanos </Button>
+      <Button class="bg-[#4D869C] text-white"> Quienes Somos? </Button>
+    </div>
+  </article>
+  <article>
+    <Image
+      src={hero}
+      class="w-[350px] md:w-[400px]"
+      alt="Image for Hero Section"
+    />
+  </article>
+</section>

@@ -1,0 +1,14 @@
+---
+
+---
+
+<button
+  class:list={[
+    "px-4 min-w-[100px] py-3 uppercase rounded-lg font-medium font-fira",
+    Astro.props.class,
+  ]}
+>
+  <slot name="before" />
+  <slot />
+  <slot name="after" />
+</button>

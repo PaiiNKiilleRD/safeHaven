@@ -1,0 +1,64 @@
+---
+import { isSideMenuOpen } from "@/store";
+---
+
+<nav
+  class:list={[
+    "absolute w-full py-6 flex justify-between items-center",
+    Astro.props.class,
+  ]}
+>
+  <h1 class="font-space text-4xl md:text-5xl font-medium text-[#4D869C]">
+    Safe Haven
+  </h1>
+  <ul class="hidden lg:flex">
+    <li>
+      <a class="px-4 py-3 hover:border-b-2 hover:text-green-500" href="#"
+        >Inicio</a
+      >
+    </li>
+    <li>
+      <a class="px-4 py-3 hover:border-b-2 hover:text-green-500" href="#"
+        >Sobre Nosotros</a
+      >
+    </li>
+    <li>
+      <a class="px-4 py-3 hover:border-b-2 hover:text-green-500" href="#"
+        >Productos</a
+      >
+    </li>
+    <li>
+      <a class="px-4 py-3 hover:border-b-2 hover:text-green-500" href="#"
+        >Contactanos</a
+      >
+    </li>
+  </ul>
+  <button class="inline-block lg:hidden z-50" id="btnMenu"
+    ><svg
+      id="svgIcon"
+      class="w-8 h-8"
+      xmlns="http://www.w3.org/2000/svg"
+      height="24px"
+      viewBox="0 -960 960 960"
+      width="24px"
+      fill="#101010"
+      ><path
+        d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"
+      ></path></svg
+    ></button
+  >
+</nav>
+
+<script>
+  import { isSideMenuOpen } from "@/store";
+  import { fade } from "astro:transitions";
+
+  const btnMenu = document.getElementById("btnMenu");
+  btnMenu?.addEventListener("click", () => {
+    const svg = document.getElementById("svgIcon");
+    isSideMenuOpen.value
+      ? (svg.style.fill = "#101010")
+      : (svg.style.fill = "#f6f6f6");
+    isSideMenuOpen.set(!isSideMenuOpen.value);
+  });
+</script>
