@@ -1,3 +1,4 @@
 # Safe Haven
+#TERMINAR
 
-Landing page created to advertise a university company project.
+Pagina creada para un proyecto de un emprendimiento universitario
